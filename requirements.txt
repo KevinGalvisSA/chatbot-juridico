@@ -6,3 +6,4 @@ qdrant-client
 langchain
 langgraph
 python-dotenv
+google-generativeai

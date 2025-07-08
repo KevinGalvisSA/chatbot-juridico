@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-import google.generativeai as genai
+import google.generativeai as genai # type: ignore
 from app.domain.models import ContextChunk
 
 load_dotenv()

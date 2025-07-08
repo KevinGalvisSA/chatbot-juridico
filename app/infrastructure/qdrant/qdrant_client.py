@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from qdrant_client import QdrantClient
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer # type: ignore
 from app.domain.models import ContextChunk
 
 load_dotenv()
@@ -9,7 +9,7 @@ load_dotenv()
 QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 
-qdrant = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+qdrant = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY) # type: ignore
 model = SentenceTransformer("all-MiniLM-L6-v2")
 COLLECTION_NAME = "constitucion_colombia"
 

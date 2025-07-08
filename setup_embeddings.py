@@ -1,7 +1,7 @@
-import fitz
-from sentence_transformers import SentenceTransformer
-from qdrant_client import QdrantClient
-from qdrant_client.models import VectorParams, Distance, PointStruct
+import fitz # type: ignore
+from sentence_transformers import SentenceTransformer # type: ignore
+from qdrant_client import QdrantClient # type: ignore
+from qdrant_client.models import VectorParams, Distance, PointStruct # type: ignore
 import uuid
 import os
 from dotenv import load_dotenv

@@ -1,5 +1,5 @@
-from fastapi import APIRouter
-from pydantic import BaseModel
+from fastapi import APIRouter # type: ignore
+from pydantic import BaseModel # type: ignore
 from app.application.usecases import ask_question
 
 router = APIRouter(prefix="/api")

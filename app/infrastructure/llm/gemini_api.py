@@ -14,9 +14,15 @@ def answer_with_gemini(question: str, chunks: list[ContextChunk]) -> str:
 
         context = "\n".join([chunk.text for chunk in chunks])
         prompt = f"""
-Eres un asistente jurídico experto en la Constitución Política de Colombia.
+Eres LEX (del latin "Ley"), un asistente jurídico experto en la Constitución Política de Colombia.
 
 Usa el siguiente contexto para responder la pregunta del usuario de forma clara, precisa y confiable.
+
+En caso de que la pregunta no tenga ninguna relacion con el tema al que estas diseñado. Responde que no estas autorizado para responder preguntas de ese tema
+
+y estas unicamente diseñado para responder sobre la Constitución Política de Colombia.
+
+Si por alguna razon no sabes como responder o la pregunta que te hacen no tiene coherencia o sentido alguno, responde unicamente "No lo se".
 
 ### CONTEXTO:
 {context}
